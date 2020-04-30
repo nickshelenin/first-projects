@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8f014554a6.js" crossorigin="anonymous"></script>
+    <title>Header</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="mobile-header">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="icons/logo.svg" class="logo" />
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="mobile-nav-links">
+          <div class="header-underline"></div>
+          <li class="menu"><a href="index.html">Home</a></li>
+          <div class="header-underline"></div>
+
+          <li class="menu menu-active"><a href="about.html">About Us</a></li>
+          <div class="header-underline"></div>
+
+          <li class="menu" id="mobile-services">
+            <a href="services.html">Our Services</a> <img src="icons/arrow-point-to-right.svg" class="right-arrow" />
+          </li>
+          <div class="header-underline"></div>
+
+          <ul class="submenu">
+            <li><a href="service-1.html">Apartment Cleaning</a></li>
+            <div class="header-underline submenu-underline"></div>
+
+            <li><a href="service-2.html">House Cleaning</a></li>
+            <div class="header-underline submenu-underline"></div>
+
+            <li><a href="service-3.html">Window Cleaning</a></li>
+            <div class="header-underline submenu-underline"></div>
+          </ul>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="desktop-header">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="icons/logo.svg" class="logo" />
+          </a>
+        </div>
+
+        <ul class="desktop-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li id="services-link-container">
+            <div id="dropdown-container">
+              <a href="services.html" id="services-link">Services</a>
+              <ul id="services-header-dropdown">
+                <li><a href="service-1.html">Apartment Cleaning</a></li>
+
+                <div class="header-dropdown-underline"></div>
+
+                <li><a href="service-2.html">House Cleaning</a></li>
+
+                <div class="header-dropdown-underline"></div>
+
+                <li><a href="service-3.html">Window Cleaning</a></li>
+
+                <div class="header-dropdown-underline"></div>
+              </ul>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+  </body>
+</html>

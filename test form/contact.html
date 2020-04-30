@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+<body>
+
+  <header></header>
+
+    <div class="contact-text-container">
+        <h1>Contact me</h1>
+        <p>I'm interested in freelance opportunities. If you have any request or questions you can contact me using form below </p>
+    </div>
+
+    <div class="main-form-container">
+        <form action="contact.php" method="POST" class="main-form" id="form" autocomplete="off">
+
+            <div class="inputs">
+              <input type="name" placeholder="Name" id="name-input" name="name">
+              <input type="email" placeholder="Email" id="email-input" name="email">
+            </div>
+
+            <textarea name="" id="message" placeholder="Message" name="message"></textarea>
+            <button id="send-button" type="submit">Send</button>
+        </form>
+    </div>
+
+    <div class="error-box">
+        <p>Please fill in all required inputs</p>
+    </div>
+
+    <!-- <script src="main.js"></script> -->
+
+</body>
+</html>

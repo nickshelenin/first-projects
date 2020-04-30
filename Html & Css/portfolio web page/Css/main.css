@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+ 
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin-left: 45em;
+    text-decoration: none;
+    float: right;
+    position: relative;
+ 
+}
+
+header ul li {
+    margin-right: 30px;
+    margin-top: 40px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: gray;  
+}
+
+a:hover {
+    border-top: 3px solid #72ccb9;
+    padding-top: 20px;
+    color: black;  
+}
+
+.background img {
+    width: 80em;
+    height: 47em;
+    padding: 0%;
+    margin-top: 3%;
+}
+
+.logo {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 10px;
+    
+
+}

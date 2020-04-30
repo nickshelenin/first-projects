@@ -1,0 +1,267 @@
+$ipad: 768px;
+$ipadPro: 1024px;
+$desktop: 1240px;
+
+@mixin iphone {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (min-width: #{$ipadPro}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background: #f2f2f2;
+  padding-bottom: .5em;
+  position: relative;
+  margin-top: 5em;
+
+
+  @include ipad() {
+    padding-bottom: 10em;
+  }
+
+  @include ipadPro() {
+    padding-bottom: 40em;
+  }
+
+  @include desktop {
+    padding-bottom: 1em;
+  }
+
+  .underline {
+    border-bottom: 1px solid #5a5a5a;
+    margin-left: -100%;
+    margin-bottom: 1em;
+  }
+}
+
+.main-footer {
+  width: 100%;
+  @include ipadPro {
+    display: flex;
+  }
+}
+
+.social-links-cont {
+  .follow-message {
+    @include iphone() {
+      display: none;
+    }
+
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-left: 45%;
+  }
+
+  .social-links {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 2em;
+
+    @include ipad() {
+      width: 25%;
+      margin-top: 4em;
+    }
+
+    @include ipadPro() {
+      width: 40%;
+      margin-top: 2em;
+      i {
+        width: 50px;
+      }
+    }
+
+    a {
+      color: #000;
+      width: 200px;
+      height: 50px;
+
+      &:hover {
+        color: #ff3e6c;
+      }
+    }
+
+    .follow-message {
+      font-size: 1.2em;
+      font-weight: 100;
+    }
+
+    ul {
+      width: 60%;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      margin-right: 20%;
+      margin-top: 1em;
+
+      @include ipad {
+        margin-top: 2em;
+      }
+
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
+.footer-accordion {
+  @include ipadPro() {
+    display: flex;
+  }
+
+
+  .underline {
+    border-bottom: 1px solid #5a5a5a;
+    margin-left: -100%;
+    margin-bottom: 1em;
+
+    @include ipadPro() {
+      display: none;
+    }
+  }
+
+  .footer-menu {
+    width: 90%;
+    margin: auto;
+
+    @include ipadPro() {
+      justify-content: space-between;
+      padding-left: 7em;
+      padding-bottom: 3em;
+    }
+
+    @include desktop {
+      margin-top: 1.5em;
+    }
+
+    .footer-link {
+      display: flex;
+      justify-content: space-between;
+      color: #000;
+      padding-bottom: 1.5em;
+
+      @include ipadPro() {
+        padding-bottom: 0em;
+      }
+
+      p {
+        font-weight: 900;
+      }
+
+      .footer-plus {
+        position: relative;
+        width: 15px;
+        height: 15px;
+
+        @include ipadPro() {
+          display: none;
+        }
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          background-color: #000;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:before {
+          top: 0;
+          left: 50%;
+          width: 2px;
+          height: 100%;
+          margin-left: -1.5px;
+        }
+
+        &:after {
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          margin-top: -1.5px;
+        }
+      }
+
+      .footer-plus.footer-acc-active {
+        &::before {
+          transform: rotate(90deg);
+        }
+      }
+
+      .footer-plus.footer-acc-active {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .footer-submenu {
+      transition: all 300ms;
+      line-height: 3em;
+      display: none;
+      overflow: hidden;
+
+
+      @include ipadPro() {
+        width: 100%;
+        display: initial;
+        line-height: 2em;
+        padding-top: -2em;
+      }
+
+      a {
+        color: #000;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .footer-submenu.footer-acc-active {
+      display: initial;
+    }
+  }
+}
+
+.copyright {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 0.8em;
+  color: #808080;
+}

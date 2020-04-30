@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: gray;
+}
+
+header {
+    text-align: center;
+    background: black;
+    color: #fff;
+    padding: 1em;
+}
+
+.middle-section {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    width: 20em;
+    padding: 1em;
+}
+
+textarea {
+    width: 20em;
+    padding: 1em;
+    resize: none;
+}
+

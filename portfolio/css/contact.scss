@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Passion+One:400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+// media queries
+$iphone: 375px;
+$ipad: 767px;
+$ipadPro: 1024px;
+$desktop: 1200px;
+// $main-color: #08FDD8;
+$main-color: #00EFF6;
+$second-color: #e31b6d;
+
+@mixin iphone {
+  @media (min-width: #{$iphone}) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+@mixin ipadPro {
+  @media (min-width: #{$ipadPro}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// main
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #202024;
+  font-family: source sans pro, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contact-text-container {
+  color: #fff;
+  text-align: left;
+  width: 90%;
+  margin: 11em auto 3em;
+
+  @include ipad {
+    width: 70%;
+  }
+
+  @include desktop() {
+    margin-top: 13em;
+    width: 50%;
+  }
+
+  h1 {
+    color: $main-color;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+}
+
+.main-form {
+  text-align: left;
+  color: #fff;
+  width: 90%;
+  margin: auto;
+
+  @include ipad {
+    width: 70%;
+  }
+
+  @include desktop() {
+    width: 50%;
+  }
+
+  .inputs {
+    @include ipadPro() {
+      display: flex;
+      width: 90%;
+    }
+
+    input {
+      margin: auto;
+      width: 90%;
+      height: 3.5em;
+      margin-bottom: 1em;
+      outline: none;
+      border: none;
+      border-radius: 2px;
+      background: #2b2b2b;
+      padding-left: 1em;
+      color: #fff;
+    }
+
+    @include ipadPro() {
+      input:last-child {
+        margin-left: 2em;
+      }
+    }
+  }
+
+  input:focus {
+    border-bottom: 1px solid $main-color;
+  }
+
+  textarea {
+    margin: auto;
+    width: 90%;
+    min-height: 7.5em;
+    margin-bottom: 2em;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    background: #2b2b2b;
+    padding: 1em 0 0 1em;
+    color: #fff;
+    resize: vertical;
+    font-size: 1.2em;
+
+    @include ipadPro {
+      min-height: 10em;
+    }
+
+    @include desktop {
+      min-height: 13em;
+    }
+  }
+
+  textarea:focus {
+    border-bottom: 2px solid $main-color;
+  }
+
+  #send-button {
+    color: $main-color;
+    background: none;
+    outline: none;
+    border: 1px $main-color solid;
+    border-radius: 5px;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    cursor: pointer;
+
+    @include desktop {
+      padding: 0.7em 2.5em;
+    }
+
+    &:hover {
+      border: 2px solid $main-color;
+      transition: 200ms;
+      background: $main-color;
+      color: #000;
+    }
+  }
+}
+
+.error-box {
+  display: none;
+  position: absolute;
+  right: 1em;
+  bottom: 6em;
+  background: $second-color;
+  border-radius: 10px;
+  animation-name: err-box-load;
+  animation-duration: 300ms;
+  overflow: hidden;
+
+  @include ipad() {
+    bottom: 19em;
+  }
+
+  @include ipadPro() {
+    bottom: 40em;
+  }
+
+  @include desktop() {
+    bottom: 1em;
+  }
+
+  p {
+    font-family: montserrat;
+    font-size: 0.7em;
+    padding: 0.2em 1.5em;
+    font-weight: 900;
+    color: #fff;
+
+    @include ipadPro {
+      font-size: 0.8em;
+    }
+  }
+}
+
+@include iphone() {
+  @keyframes err-box-load {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@include ipadPro() {
+  @keyframes err-box-load {
+    0% {
+      transform: translateX(100%);
+    }
+  }
+}

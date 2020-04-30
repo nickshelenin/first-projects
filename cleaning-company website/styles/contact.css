@@ -1,0 +1,119 @@
+body {
+  color: #3d4c58;
+}
+
+#contact-heading {
+  width: 90%;
+  margin: auto;
+  margin-top: 4em;
+}
+
+@media (min-width: 768px) {
+  #contact-heading {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+}
+
+.contact-container {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5em;
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .office-section ul {
+    line-height: 2em;
+  }
+}
+
+.office-section ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 900;
+}
+
+.office-section ul li img {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5em;
+}
+
+.contact-section {
+  margin-top: -1.5em;
+}
+
+@media (min-width: 1200px) {
+  .contact-section {
+    margin-top: -2.5em;
+  }
+}
+
+.contact-section input,
+.contact-section textarea {
+  border: 1px solid #ccc;
+  outline: none;
+  width: 300px;
+  height: 35px;
+  padding-left: 0.5em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .contact-section input,
+  .contact-section textarea {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-section input,
+  .contact-section textarea {
+    width: 500px;
+  }
+}
+
+.contact-section textarea {
+  height: 100px;
+  resize: none;
+  padding-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+.contact-section #send-btn {
+  color: #3d4c58;
+  border: 2px solid #4ba0e8;
+  padding: 0.3em 1.5em;
+  border-radius: 5px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+@media (min-width: 1200px) {
+  .contact-section #send-btn {
+    padding: 0.4em 3em;
+  }
+}
+
+.contact-section #send-btn:hover {
+  background: #4ba0e8;
+  color: #fff;
+}
+/*# sourceMappingURL=contact.css.map */

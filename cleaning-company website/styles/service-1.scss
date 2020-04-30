@@ -1,0 +1,115 @@
+$primary-color: #3d4c58;
+$second-color: #4ba0e8;
+$light-gray: #8a9299;
+$green: #6fbf52;
+
+@mixin iphone {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+body {
+  color: $primary-color;
+}
+
+#our-services-heading {
+  margin-top: 4em;
+  font-size: 1.7em;
+  margin-left: 5%;
+
+  @include ipadPro() {
+    //   text-align: center;
+  }
+}
+
+.our-services-section {
+  width: 90%;
+  margin: auto;
+
+  @include ipadPro {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 2em;
+  }
+
+  .service-title {
+    font-size: 1.5em
+  }
+}
+
+.service-details-section {
+  .service-main-image {
+    width: 100%;
+  }
+
+  p {
+    color: $light-gray;
+    font-size: 0.9em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+}
+
+.including-services {
+  li {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 15px;
+      height: 10px;
+      margin-right: 0.5em;
+    }
+  }
+
+  p {
+    @include ipadPro() {
+      width: 75%;
+    }
+  }
+}
+
+.services-nav-section {
+  ul {
+    background: #f5f5f5;
+
+    .service-nav-underline {
+      border-bottom: 2px solid #fff;
+    }
+
+    li {
+      padding: 1em 1em;
+
+      a {
+        color: $primary-color;
+        font-size: 1.1em;
+
+        @include ipadPro() {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}

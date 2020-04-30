@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/product.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8f014554a6.js" crossorigin="anonymous"></script>
+    <script src="js/cart.js" async></script>
+
+    <title>Product</title>
+  </head>
+  <body>
+    <header></header>
+
+    <div class="product-container-mobile product-cont">
+      <div class="product-name-container">
+        <p class="product-name">JBL White T500BT</p>
+        <p class="product-price">$449.99</p>
+      </div>
+
+      <div class="slider-container">
+        <div class="product-slide">
+          <img src="images/jbl-t500bt-white-slide1.jpg" class="cart-image"/>
+        </div>
+
+        <div class="product-slide">
+          <img src="images/jbl-t500bt-white-slide2.jpg" alt="" />
+        </div>
+
+        <div class="product-slide">
+          <img src="images/jbl-t500bt-white-slide3.jpg" alt="" />
+        </div>
+
+        <div class="product-slide">
+          <img src="images/jbl-t500bt-white-slide4.jpg" alt="" />
+        </div>
+
+        <div class="product-slide">
+          <img src="images/jbl-t500bt-white-slide5.jpg" alt="" />
+        </div>
+
+        <div class="dots-container">
+          <span class="dot active-dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <div class="underline"></div>
+      </div>
+
+      <div class="buy-info">
+        <div class="description-text">
+          <p>
+            White T500BT Powerful Bass Wireless Over Ear Headphones with Mic
+          </p>
+        </div>
+
+        <div class="buy-buttons">
+          <button class="addToCart-btn">Add to Bag</button>
+          <a href="#"><i class="far fa-heart wishlist-icon wishlist-icon" title="Add to wishlist"></i></a>
+        </div>
+
+        <div class="underline underline1"></div>
+
+        <div class="help-container">
+          <img src="icons/chat-icon.svg" alt="" />
+          <p>Need some help?</p>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-container-desktop product-cont">
+      <div class="product-description-desktop">
+        <div class="product-name-container">
+          <p class="product-name">JBL White T500BT</p>
+          <p class="product-price">$449.99</p>
+        </div>
+
+        <div class="underline"></div>
+
+        <div class="description-text">
+          <p>
+            White T500BT Powerful Bass Wireless Over Ear Headphones with Mic
+          </p>
+        </div>
+
+        <div class="buy-buttons">
+          <button class="addToCart-btn">Add to Cart</button>
+          <a href="#"><i class="far fa-heart wishlist-icon wishlist-icon" title="Add to wishlist"></i></a>
+        </div>
+
+        <div class="underline"></div>
+
+        <div class="help-container">
+          <img src="icons/chat-icon.svg" alt="" />
+          <p>Need some help?</p>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="image-gallery">
+        <div class="main-image">
+          <img src="images/jbl-t500bt-white-slide1.jpg" id="main-image"/>
+        </div>
+
+        <div class="image-row">
+          <div class="image-container active ">
+            <img src="images/jbl-t500bt-white-slide1.jpg" class="img cart-image" />
+          </div>
+
+          <div class="image-container ">
+            <img src="images/jbl-t500bt-white-slide2.jpg" class="img" />
+          </div>
+
+          <div class="image-container ">
+            <img src="images/jbl-t500bt-white-slide3.jpg" class="img" />
+          </div>
+
+          <div class="image-container ">
+            <img src="images/jbl-t500bt-white-slide4.jpg" class="img" />
+          </div>
+
+          <div class="image-container ">
+            <img src="images/jbl-t500bt-white-slide5.jpg" class="img" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="features-section">
+      <div class="feature-grid">
+        <div class="feature-container">
+          <div class="feature-text">
+            <img src="icons/bluetooth-icon.svg" />
+            <h1>Wireless Bluetooth Streaming</h1>
+            <p>
+              Wirelessly stream high-quality sound from your smartphone without messy cords
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-image">
+          <img src="images/bluetooth-image.webp" alt="" />
+        </div>
+      </div>
+
+      <div class="feature-grid feature-grid2">
+        <div class="feature-container">
+          <div class="feature-text">
+            <img src="icons/soundwave.svg" />
+            <h1>JBL Pure Bass Sound</h1>
+            <p>
+              It features the renowned JBL Pure Bass sound, which can be found in the most famous venues all around the
+              world.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-image">
+          <img src="images/bassSound-image.webp" alt="" />
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-container">
+          <div class="feature-text">
+            <img src="icons/headphone-mic.svg" />
+            <h1>Hands Free Calls</h1>
+            <p>
+              It features the renowned JBL Pure Bass sound, which can be found in the most famous venues all around the
+              world.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-image">
+          <img src="images/freeCalls-image.webp" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <h1 class="product-info-text">Product Information</h1>
+
+    <ul class="productInfo-accordion">
+      <div class="underline"></div>
+      <li class="menu">
+        <div class="link">
+          <p>Specs</p>
+          <div class="plus extend"></div>
+        </div>
+
+        <div class="submenu">
+          <ul>
+            <h1>General Specification</h1>
+            <div class="sub-underline"></div>
+            <li>
+              <p>Drive size (mm)</p>
+              <p class="align-right">32.0</p>
+            </li>
+
+            <li>
+              <p>Number of drivers per ear</p>
+              <p class="align-right">1.0</p>
+            </li>
+
+            <li>
+              <p>Impedance(ohms)</p>
+              <p class="align-right">32.0</p>
+            </li>
+
+            <h1>Battery</h1>
+            <div class="sub-underline"></div>
+            <li>
+              <p>Dynamic frequency response range(Hz)</p>
+              <p class="align-right">20 Hz - 20 Hz</p>
+            </li>
+
+            <li>
+              <p>Battery type</p>
+              <p class="align-right">Lithium-ion Polymer (3.7V, 300mAH)</p>
+            </li>
+
+            <li>
+              <p>Chargin hours (from empty)</p>
+              <p class="align-right">2</p>
+            </li>
+
+            <li>
+              <p>Speed charging time (hours)</p>
+              <p class="align-right">2.0</p>
+            </li>
+
+            <li>
+              <p>Talk time (hours)</p>
+              <p class="align-right">16.0</p>
+            </li>
+
+            <li>
+              <p>Play time (hours)</p>
+              <p class="align-right">16.0</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <div class="underline"></div>
+
+      <li class="menu">
+        <div class="link">
+          <p>Questions & Answers</p>
+          <div class="plus extend"></div>
+        </div>
+
+        <div class="submenu">
+          <span
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi expedita quia earum ab? Exercitationem,
+            impedit.</span
+          >
+        </div>
+      </li>
+
+      <div class="underline"></div>
+    </ul>
+
+    <footer></footer>
+
+    <script src="js/header.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/footer.js"></script>
+    <!-- <script src="js/cart.js"></script> -->
+  </body>
+</html>

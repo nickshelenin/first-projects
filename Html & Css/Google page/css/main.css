@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #898988;
+}
+
+a:hover {
+    border-bottom: 1px solid gray;
+}
+
+.top-left{
+    position: absolute;
+    display: flex;
+    padding-top: 30px;
+    margin-left: 30px;
+}
+
+.top-right {    
+    display: flex;
+    text-align: center;
+    margin-left: 60em;
+    padding-top: 30px;
+}
+
+header ul li {
+    padding: 15px;
+    font-size: 18px;
+}
+
+#icons {
+    position: absolute;
+    margin-top: -15px;
+}
+
+.container2 {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.search-txt {
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 0.5px 0.5px 1px 0.5px #ccc;
+    height: 35px; 
+    outline: none;
+}
+
+
+.submit-buttons {
+    padding: 30px;
+}
+
+.buttons {
+    border: none;
+    width: 120px;
+    height: 35px;
+    background-color: #f2f2f2;
+    color: #575553;
+    cursor: pointer;
+}
+
+input.buttons:hover {
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #f2f2f2;
+    margin-top: 245px;
+    height: 60px;
+}
+
+.bottom-left {
+    position: absolute;
+    display: flex;
+    padding: 20px;
+}
+
+.bottom-right {
+    display: flex;
+    margin-left: 60em;
+    padding: 20px;
+}
+
+footer ul li {
+    padding-right: 20px;
+}
+
+input[type=text] {
+    padding: 0 8px;
+}

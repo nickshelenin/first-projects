@@ -1,0 +1,282 @@
+$primary-color: #3d4c58;
+$second-color: #4ba0e8;
+$light-gray: #838588;
+$green: #6fbf52;
+
+@mixin iphone {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+body {
+  color: $primary-color;
+}
+
+#about-us-heading {
+  text-align: center;
+  padding: 6em 0 3em 0;
+}
+
+.about-us {
+  @include ipadPro() {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .cleaning-crew-image-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  #cleaning-crew-image {
+    width: 100%;
+
+    @include ipadPro() {
+      display: none;
+    }
+  }
+
+  #desktop-cleaning-crew-image {
+    @include iphone {
+      display: none;
+    }
+
+    width: 450px;
+    height: 450px;
+    // margin-left: -1em;
+  }
+
+  .about-us-list {
+    width: 90%;
+    margin: auto;
+
+    @include ipad() {
+      width: 80%;
+    }
+
+    @include ipadPro() {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 100px;
+      grid-row-gap: 30px;
+    }
+
+    .about-us-text {
+      font-size: 1.5em;
+      color: $primary-color;
+      display: flex;
+      align-items: center;
+
+      h3 {
+        font-size: 0.8em;
+
+        @include ipadPro() {
+          font-size: 0.6em;
+        }
+
+        @include desktop() {
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    .about-us-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 0.8em;
+
+      @include desktop() {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    p {
+      color: $light-gray;
+      margin: 0;
+      text-align: left;
+      font-size: 0.9em;
+
+      @include desktop() {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+.team-container {
+  text-align: center;
+
+  h1 {
+    color: $second-color;
+    margin: 3em 0 1em 0;
+  }
+
+  .green-underline {
+    border-bottom: 1px solid $green;
+    width: 150px;
+    margin: 1em auto;
+
+    @include ipadPro() {
+      width: 150px;
+    }
+  }
+
+  .employees {
+    @include ipadPro() {
+      margin-top: 5em;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .employee {
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+
+      &:hover {
+      }
+    }
+  }
+
+  .employee-name {
+    line-height: 1.5em;
+  }
+
+  p {
+    width: 85%;
+    margin: 0 auto 5em auto;
+
+    @include ipad() {
+      width: 70%;
+    }
+  }
+}
+
+.why-hire-us {
+  text-align: center;
+  margin-top: 5em;
+
+  p {
+    color: $light-gray;
+
+    @include ipad() {
+      width: 80%;
+      margin: auto;
+    }
+
+    @include desktop() {
+      width: 60%;
+      margin-bottom: 3em;
+    }
+  }
+
+  .why-hire-us-grid {
+    @include ipad {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include ipadPro() {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .why-hire-us-container {
+    margin-top: 2em;
+
+    h2 {
+      font-size: 1.2em;
+
+      @include desktop() {
+        width: 70%;
+        margin: 1em auto;
+      }
+    }
+
+    p {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 4em;
+
+      @include ipad() {
+        margin-bottom: 2em;
+      }
+    }
+    .hire-icon {
+      background: #fff;
+      box-shadow: 0 0 30px rgba(85, 85, 85, 0.17);
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin: auto;
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin-top: 25%;
+      }
+    }
+  }
+}
+
+.company-history-container {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 3em;
+
+  @include ipad {
+    margin-top: 2em;
+  }
+
+  @include desktop {
+    margin: 7em auto;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    @include ipad() {
+      width: 80%;
+      margin: auto;
+    }
+
+    @include ipadPro() {
+      margin-bottom: 2em;
+    }
+  }
+
+  p {
+    color: $light-gray;
+
+    @include ipadPro() {
+      width: 90%;
+      margin: auto;
+    }
+  }
+}

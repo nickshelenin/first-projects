@@ -1,0 +1,256 @@
+html {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif;
+  background: #f2f2f2;
+}
+
+.main-section {
+  background: url(../Images/main-banner.jpg) center;
+  background-size: cover;
+  height: 60vh;
+}
+
+@media (min-width: 1024px) {
+  .main-section {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1240px) {
+  .main-section {
+    height: 80vh;
+  }
+}
+
+.main-section .main-text {
+  padding-top: 8em;
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .main-section .main-text {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-section .main-text {
+    width: 90%;
+    padding-top: 15em;
+  }
+}
+
+.main-section .main-text p {
+  color: #fff;
+  font-size: 3em;
+  margin-bottom: 2em;
+}
+
+.main-section .main-text a {
+  color: #fff;
+  background: #000;
+  padding: 1em 2em;
+  border-radius: 5px;
+}
+
+.main-section .main-text a:hover {
+  font-weight: 900;
+  background: #fff;
+  color: #000;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.section {
+  text-align: left;
+}
+
+.section .background-image {
+  background-image: url(../Images/background1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1240px) {
+  .section .background-image {
+    height: 50vh;
+  }
+}
+
+.section .background-image .background-image-text {
+  width: 90%;
+  margin: auto;
+  padding-top: 1em;
+  line-height: 3em;
+}
+
+@media (min-width: 768px) {
+  .section .background-image .background-image-text {
+    width: 70%;
+    line-height: 5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section .background-image .background-image-text {
+    width: 90%;
+    padding-top: 3em;
+  }
+}
+
+.section .background-image .background-image-text h1 {
+  font-size: 2.5em;
+}
+
+@media (min-width: 768px) {
+  .section .background-image .background-image-text h1 {
+    font-size: 4em;
+    font-weight: 100;
+  }
+}
+
+.section .background-image .background-image-text h3 {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+@media (min-width: 768px) {
+  .section .background-image .background-image-text h3 {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .products-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.products-section .product {
+  width: 300px;
+  height: 550px;
+  margin: auto;
+  background: #fff;
+  position: relative;
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+.products-section .product .slide img {
+  width: 283px;
+  height: 280px;
+  margin: 2em 0 2em 0;
+  background-size: cover;
+}
+
+.products-section .product .slider-dots {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.products-section .product .slider-dots .dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 1em 2px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+}
+
+.products-section .product .wishlist-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 10px;
+  color: #000;
+}
+
+.products-section .product .wishlist-icon:hover {
+  color: #ff3e6c;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.products-section .product .description {
+  text-align: center;
+  line-height: 2em;
+}
+
+.products-section .product .description p {
+  margin-left: 5%;
+  color: #000;
+}
+
+.products-section .product .description .headphone-name {
+  font-weight: 900;
+}
+
+.products-section .product .description .price {
+  position: absolute;
+  font-weight: 900;
+  font-size: 1.3rem;
+  top: 430px;
+  left: 90px;
+}
+
+.products-section .product .description .buy-now-btn {
+  color: #fff;
+  background: #ff3e6c;
+  padding: 0.5em 1.5em;
+  border-radius: 5px;
+  position: absolute;
+  top: 470px;
+  right: 90px;
+}
+
+.products-section .product .description .buy-now-btn:hover {
+  -webkit-box-shadow: 0 0 3px #5a5a5a;
+          box-shadow: 0 0 3px #5a5a5a;
+}
+
+.section-b .background-image {
+  background: url(../Images/background2.jpeg) center;
+  background-size: cover;
+}
+
+.section-c .background-image {
+  background: url(../Images/background3.jpg) center;
+  background-size: cover;
+}
+
+.section-d h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 2em 0;
+  color: #ff3e6c;
+}
+/*# sourceMappingURL=style.css.map */

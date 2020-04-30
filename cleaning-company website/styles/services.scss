@@ -1,0 +1,196 @@
+$primary-color: #3d4c58;
+$second-color: #4ba0e8;
+$light-gray: #838588;
+$green: #6fbf52;
+
+@mixin iphone {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+body {
+  color: $primary-color;
+}
+
+#services-heading {
+  padding-top: 6em;
+  text-align: center;
+
+  p {
+    width: 90%;
+    margin: auto;
+    color: $light-gray;
+
+    @include ipadPro {
+      width: 70%;
+    }
+
+    @include desktop() {
+      width: 60%;
+    }
+  }
+}
+
+#cleaning-services {
+  margin-top: 5em;
+
+  @include ipadPro() {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cleaning-service {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 3em;
+
+    @include ipadPro {
+      margin: 0;
+    }
+
+    img {
+      width: 350px;
+      border-radius: 15px;
+
+      @include ipadPro {
+        width: 250px;
+        height: 200px;
+        border-radius: 10px;
+      }
+
+      @include desktop() {
+        width: 350px;
+      }
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    p {
+      width: 90%;
+      margin: auto;
+      color: $light-gray;
+      margin-bottom: 2em;
+
+      @include ipad() {
+        width: 70%;
+      }
+    }
+
+    .learn-more-service-cta {
+      border: 2px solid $second-color;
+      padding: 0.5em 1.5em;
+      border-radius: 25px;
+      color: $primary-color;
+      transition: 200ms;
+
+      &:hover {
+        background: $second-color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.service-price-container {
+  text-align: center;
+
+  h1 {
+    font-size: 1.8em;
+    margin-top: 3em;
+  }
+
+  p {
+    width: 90%;
+    margin: auto;
+
+    @include desktop() {
+      margin-bottom: 2em;
+    }
+  }
+}
+.service-prices {
+  @include ipadPro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service-price-card {
+    background: #fff;
+    width: 330px;
+    height: 300px;
+    margin: 2em auto 3em auto;
+    box-shadow: 0 0 30px rgba(153, 153, 153, 0.17);
+    border-radius: 15px;
+    padding-bottom: 2em;
+
+    @include ipadPro() {
+      width: 250px;
+    }
+
+    @include desktop {
+      width: 300px;
+      padding-bottom: 4em;
+    }
+
+    h3 {
+      padding-top: 1em;
+    }
+    .service-underline {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .service-price {
+      margin-top: 0;
+      h1 {
+        margin: 0;
+        padding: 0.5em 0;
+        font-size: 2em;
+        color: $second-color;
+      }
+    }
+
+    .service-price-details {
+      margin: 1em 0 2em 0;
+      p {
+        color: $light-gray;
+        line-height: 2em;
+      }
+    }
+    .service-order-btn {
+      background: $second-color;
+      padding: 0.5em 1.5em;
+      border-radius: 25px;
+      margin-bottom: 2em;
+      color: #fff;
+      transition: 200ms;
+
+      &:hover {
+        background: inherit;
+        border: 2px solid $second-color;
+        color: $primary-color;
+      }
+    }
+  }
+}

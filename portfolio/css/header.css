@@ -1,0 +1,138 @@
+body {
+  font-family: 'open sans', sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+.main-header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  background: #1b1b1f;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  height: 80px;
+  z-index: 999;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.nav-list li {
+  list-style: none;
+  align-items: center;
+}
+
+.nav-list li a {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.nav-list li a:hover {
+  color: #00EFF6;
+  transition: 300ms;
+}
+
+.logo img {
+  height: 85px;
+}
+
+@media screen and (max-width: 760px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-ham {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    position: absolute;
+    top: 2em;
+    right: 1em;
+  }
+  .bar {
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.13, 0.24, 0.35, 1.64);
+    cursor: pointer;
+  }
+  .one.active {
+    transform: translate(0, 8px) rotate(45deg);
+  }
+  .two.active {
+    background: transparent;
+    transform: translateX(-55px);
+  }
+  .three.active {
+    transform: translate(0, -8px) rotate(-45deg);
+  }
+  .nav-list {
+    position: absolute;
+    left: 0;
+    top: 8.5em;
+    display: none;
+    animation-name: nav-load;
+    animation-duration: 300ms;
+    background: #1b1b1f;
+    width: 100%;
+    height: 7em;
+    align-items: center;
+    font-size: 0.5em;
+    transition: all ease 300ms;
+    justify-content: space-around;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    width: 100%;
+    margin: auto;
+  }
+
+  .nav-list li {
+    margin-right: 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-list li {
+    margin-right: 6em;
+  }
+
+  .nav-list li a {
+    font-size: 1.3rem;
+  }
+}
+
+@keyframes nav-load {
+  0% {
+    transform: translateX(-100%);
+  }
+}

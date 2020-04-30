@@ -1,0 +1,87 @@
+body {
+  color: #3d4c58;
+}
+
+#our-services-heading {
+  margin-top: 4em;
+  font-size: 1.7em;
+  margin-left: 5%;
+}
+
+.our-services-section {
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .our-services-section {
+    width: 95%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    grid-column-gap: 2em;
+  }
+}
+
+.our-services-section .service-title {
+  font-size: 1.5em;
+}
+
+.service-details-section .service-main-image {
+  width: 100%;
+}
+
+.service-details-section p {
+  color: #8a9299;
+  font-size: 0.9em;
+}
+
+.service-details-section h3 {
+  font-size: 1.1em;
+}
+
+.including-services li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.including-services li img {
+  width: 15px;
+  height: 10px;
+  margin-right: 0.5em;
+}
+
+@media (min-width: 1024px) {
+  .including-services p {
+    width: 75%;
+  }
+}
+
+.services-nav-section ul {
+  background: #f5f5f5;
+}
+
+.services-nav-section ul .service-nav-underline {
+  border-bottom: 2px solid #fff;
+}
+
+.services-nav-section ul li {
+  padding: 1em 1em;
+}
+
+.services-nav-section ul li a {
+  color: #3d4c58;
+  font-size: 1.1em;
+}
+
+@media (min-width: 1024px) {
+  .services-nav-section ul li a {
+    font-size: 1em;
+  }
+}
+/*# sourceMappingURL=service-1.css.map */

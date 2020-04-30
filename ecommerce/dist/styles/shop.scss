@@ -1,0 +1,223 @@
+$ipad: 768px;
+$ipadPro: 1024px;
+$desktop: 1200px;
+
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (min-width: #{$ipadPro}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000;
+  background: #F5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#search-result {
+  padding-top: 2em;
+  text-align: center;
+  padding-bottom: 0.5em;
+  font-weight: 800;
+  font-size: 2.5em;
+  font-family: Arial, Helvetica sans-serif;
+
+  @include ipadPro() {
+    padding: 3em 0 1em 0;
+  }
+}
+
+.category-container {
+  color: #000;
+  text-align: center;
+  margin-bottom: 5em;
+
+  @include desktop() {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 3em;
+  }
+
+  .category {
+    @include ipad() {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 90%;
+      margin: auto;
+    }
+
+    @include ipadPro() {
+      width: 78%;
+    }
+
+    @include desktop() {
+      display: flex;
+    }
+
+    li {
+      background: #8a8a8a3f;
+      width: 90%;
+      margin: 1em auto;
+      padding: 1em 0;
+      font-size: 0.9em;
+      font-family: Arial, Helvetica, sans-serif;
+
+      @include ipad() {
+        padding: 1.2em 0;
+        width: 95%;
+        margin: 0.6em auto;
+        margin-bottom: 2em;
+      }
+
+      @include ipadPro() {
+        margin-bottom: 2em;
+      }
+
+      @include desktop() {
+        width: 23%;
+      }
+    }
+  }
+
+  .category-sort-container {
+    .sort-select {
+      // appearance: none;
+      background: inherit;
+      width: 70%;
+      height: 3em;
+      outline: none;
+      border: none;
+
+      @include desktop {
+        width: 79%;
+        margin-top: 1em;
+      }
+    }
+
+    .label-sort {
+      font-size: 0.9em;
+      border-bottom: 1px solid #adadad;
+      padding-bottom: 1em;
+    }
+  }
+}
+
+.products {
+  @include ipad() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: auto;
+  }
+
+  @include ipadPro() {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  @include desktop() {
+      width: 80%;
+  }
+}
+
+.product {
+  width: 300px;
+  height: 550px;
+  margin: auto;
+  background: #fff;
+  position: relative;
+  text-align: center;
+  margin-bottom: 5em;
+
+  .slide {
+    img {
+      width: 283px;
+      height: 280px;
+      margin: 2em 0 2em 0;
+      background-size: cover;
+    }
+  }
+
+  .slider-dots {
+    user-select: none;
+
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 1em 2px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      z-index: 1;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  .wishlist-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    color: #000;
+
+    &:hover {
+      color: #ff3e6c;
+      transition: 300ms ease-in-out;
+    }
+  }
+
+  .description {
+    text-align: center;
+    line-height: 2em;
+
+    p {
+      margin-left: 5%;
+      color: #000;
+    }
+
+    .headphone-name {
+      font-weight: 900;
+      width: 90%;
+    }
+
+    .price {
+      position: absolute;
+      font-weight: 900;
+      font-size: 1.3rem;
+      top: 430px;
+      left: 95px;
+    }
+
+    .buy-now-btn {
+      color: #fff;
+      background: #ff3e6c;
+      padding: 0.5em 1.5em;
+      border-radius: 5px;
+      position: absolute;
+      top: 480px;
+      right: 90px;
+
+      &:hover {
+        box-shadow: 0 0 3px #5a5a5a;
+      }
+    }
+  }
+}

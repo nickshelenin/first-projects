@@ -1,0 +1,696 @@
+$ipad: 767px;
+$iphone: 375px;
+
+@mixin iphone{
+    @media(min-width: #{$iphone}){
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media (min-width: #{$ipad}) {
+        @content;
+    }
+}
+$ipadPro: 1024px;
+@mixin ipadPro {
+    @media (min-width: #{$ipadPro}) {
+        @content;
+    }
+}
+$desktop: 1200px;
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }     
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000000;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li{
+    list-style-type: none;
+}
+.hide-mobile{
+    display: none;
+}
+
+.nav-links{
+    font-family: lato;
+    font-weight: 900;
+    width: 100%;
+    position: absolute;
+    top: 3em;
+    right: 0;
+    display: flex;
+    background: #000;
+    height: 5em;
+    align-items: center;
+    justify-content: space-between;
+    animation-name: nav-load;
+    animation-duration: 300ms;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+
+.nav-links{
+    display: none;
+
+    a{
+        scroll-behavior: smooth;
+        transition: 300ms ease-in-out;
+    }
+}
+
+.nav-links.active{
+    display: flex;
+}
+
+    @include ipad(){
+        .nav-bar{
+            display: none;
+        }
+        .nav-links{
+            position: relative;
+            background: none;
+            font-family: lato;
+            font-weight: 900;
+            display: flex;
+            justify-content: space-between;
+            top: 0;
+            animation-name: nav-load-ipad;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+            transform: scale(0);
+            li{
+                display: flex;
+                justify-content: space-around;
+                padding-right: 3em;
+            }
+            a{
+                color: #000000;
+
+                &:hover{
+                    color: #adadad;
+                    transition: .2s ease;
+                }
+            }
+        }
+    }
+    @include ipadPro(){
+        .hide-mobile{
+            display: flex;
+        }
+        .nav-bar{
+            display: none;
+        }
+        .nav-links{
+            font-family: lato;
+            font-weight: 900;
+            display: flex;
+            justify-content: space-between;
+            li{
+                display: flex;
+                justify-content: space-around;
+                padding-right: 3em;
+            }
+            
+            a{
+                color: #000000;
+                &:hover{
+                    color: #adadad;
+                    transition: .2s ease;
+                }
+            }
+        }
+    }
+
+.logo {
+    font-family: 'Port Lligat Slab', serif;
+    align-items: center;
+    font-size: 3rem;
+    animation: logo-animate 300ms;
+    
+    a {
+        color: #000000;
+        margin-left: .3em;
+    }
+}
+#nav-ham {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    .bar{
+        height: 3px;
+        width: 100%;
+        background: #000;
+        border-radius: 10px;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(.13,.24,.35,1.64);
+    }
+    .one.active{
+        transform: translate(0, 4px) rotate(45deg);
+    }
+
+    .two.active{
+        background: transparent;
+        transform: translateX(-55px);
+    }
+
+    .three.active{
+        transform: translate(0, -14px) rotate(-45deg);
+    }
+}
+}  
+
+.main-section{
+    position: relative;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.3), rgba(13, 13, 13, 0.3)), url(../images/homeImage.jpg) no-repeat ;
+    height: 330px;
+    background-size: 100% ;
+    margin-bottom: -2em;
+
+    @include ipad{
+        height: 550px;
+        margin-bottom: 0;
+        margin-top: -1em;
+    }
+    
+    @include ipadPro{
+        background-attachment: fixed;
+        height: 600px;
+        margin-bottom: 5em;
+    }
+
+    @include desktop{
+        margin-top: -3em;
+    }
+    
+    .main-text {
+    h1{
+        font-family: Port Lligat Slab, serif;
+        font-size: 4rem;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+        @include ipad{
+            font-size: 6rem;
+            padding-top: 1em;
+        }
+
+        @include desktop(){
+            font-size: 8rem;
+        }
+    }
+    .home-get-btn{
+        display: flex;
+        justify-content: center;
+
+    a{
+        font-family: Lato;
+        color: #000;
+        background: #fff;
+        padding: .5em 1em;
+        border-radius: 3%;
+        font-weight: 900;
+        &:hover{
+            transition: 0.3s;
+            background: #000;
+            color: #fff;
+        }
+        @include ipad{
+            font-size: 1.2rem;
+            padding: .5em 1.5em;
+        }     
+        
+        @include desktop(){
+            padding: .7em 2em;
+        }
+    }
+}
+}
+}
+
+.order-section{
+    display: none;
+    z-index: 999;
+    position: fixed;
+    background: #f2f2f2;
+    top: 4em;
+    width: 100%;
+    height: 100vh;
+    .order-text{
+        font-family: lato;
+        color: #000;
+        text-align: center;
+
+        h1{
+            font-size: 1.5rem;
+        span{
+            font-family: port lligat slab;
+            font-size: 2rem;
+        }
+    }
+
+    p{
+        font-weight: 900;
+        font-size: 1.2rem;
+    }
+    }
+}
+
+.about-section{
+    position: relative;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.5), rgba(13, 13, 13, 0.5)), url(../images/aboutBackground.jpg) no-repeat ;
+    height: 350px;
+    background-size: 100%; 
+    margin-bottom: -2em;
+
+    @include ipad{
+        height: 350px;
+        margin-bottom: 5em;
+    }
+    
+    @include ipadPro{
+        background-attachment: fixed;
+        height: 450px;
+    }
+
+    .about-text{
+    h1{
+        font-family: lato;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        height: inherit;
+        padding: 1em 0 0 0;
+
+        @include ipad{
+            font-size: 2rem;
+        }
+
+        @include ipadPro{
+            font-size: 2.5rem;
+        }
+    }
+    p{
+        font-family: lato;
+        font-size: 1.1rem;
+        height: inherit;
+        line-height: 1.4em;
+        display: flex;
+        justify-content: center;
+        margin: 0 10% 0 10%;
+        text-align: center;
+
+        @include ipad{
+            font-size: 1.6rem;
+            line-height: 1.5em;
+        }
+
+        @include ipadPro{
+            font-size: 2rem;
+            line-height: 3.5rem;
+            
+        }
+    }
+}
+}
+
+.menu-section{
+    position: relative;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.5), rgba(13, 13, 13, 0.5)), url(../images/menuBackground.jpg) no-repeat;
+    height: 150px;
+    background-size: 100%;
+
+    @include ipad{
+        height: 250px;
+    }
+    
+    @include ipadPro{
+        height: 350px;
+        background-attachment: fixed;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        font-family: lato;
+        h1{
+            font-weight: 100;
+            font-size: 2rem;
+
+            @include ipad(){   
+                font-size: 2.8rem;
+                font-weight: 100;
+            }
+
+            @include ipadPro{
+                font-size: 4rem;
+            }
+        }
+}
+}
+
+.indicator{   
+
+// .arrow-down {
+//     width: 0; 
+//     height: 0; 
+//     border-left: 5px solid transparent;
+//     border-right: 5px solid transparent; 
+//     border-top: 10px solid #fff;
+//     display: flex;
+//     flex-direction: inherit;
+//   }
+display: none;
+.menu-list{
+    font-family: lato;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 3em;
+    margin-top: 1em;
+}
+}
+
+.menu-description-container{
+
+.food-links{
+    font-family: lato;
+    text-align: center;
+
+    .food-title{
+        font-weight: 100;
+        margin: 3em;
+        cursor: pointer;
+        user-select: none;
+
+    }
+
+    .menu-description{
+    display: none;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: 1fr  1fr;
+    .dish{
+        text-align: left;
+        line-height: 1em;
+        h3{
+            font-size: 1rem;
+        }
+        p{
+            font-size: .9rem;
+            color: #adadad;
+            font-weight: 900;
+        }
+    }
+    .price{
+        text-align: right;
+    }
+    }
+
+    .menu-description.active-food{
+        display: grid;
+    }
+}
+}
+
+.contact-section{
+    position: relative;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.5), rgba(13, 13, 13, 0.5)), url(../images/contactBackground.jpg) no-repeat;
+    height: 150px;
+    background-size: 100%;
+    margin-top: 3em;
+    font-family: lato;
+
+    @include ipad{
+        height: 250px;
+        font-size: 1.5rem;
+    }
+
+    @include ipadPro{
+        height: 350px;
+        background-attachment: fixed;
+    }
+
+    .contact-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+    }
+}
+
+.nav-section{
+    font-family: lato;
+    color: #adadad;
+    line-height: 2em;
+    // width: 90%;
+
+    @include ipadPro{
+        margin-top: 3em;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    h1{
+        color: #fff;
+    }
+
+.business-hours{
+    display: grid;
+
+    @include ipad{
+        .time{
+            margin-left: -10em;
+        }
+    }
+
+    @include ipadPro{
+        font-size: .9rem;
+        .time{
+            margin-left: 2em;
+        }
+    }
+
+    h1{
+        margin-left: 1.5em; 
+    }
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        line-height: 2em;
+
+        @include ipad{
+            line-height: 2.5em;
+        }
+    }
+}
+
+.navigation{
+    position: relative;
+    display: none;
+    width: 30%;
+
+    @include ipadPro(){
+        display: flex;
+    }
+    h1{
+        margin-right: 30%; 
+    }
+
+    .google-map{
+        position: absolute;
+        right: 3em;
+        top: 6em;
+
+        @include desktop(){
+            width: 450px;
+            right: 5em;            
+        }
+    }   
+}
+}
+
+.email-section{
+    @include ipadPro(){
+        margin-top: 5em;
+    }
+
+    h1{
+        font-family: lato;
+        text-align: center;
+
+        @include desktop(){
+            font-size: 2rem;
+            font-weight: 100;
+        }
+    }
+
+    .form-container{
+        width: 100%;
+        margin: auto;
+
+        @include ipad{
+            width: 50%;
+         }       
+
+         @include ipadPro(){
+            width: 47%;
+         }    
+
+         @include desktop(){
+         }
+    }
+
+    form{
+        margin-left: 2em;
+        color: #fff;
+        input, textarea{
+            display: block;
+            background: none;
+            border: 1px #fff solid;
+            border-radius: 3px;
+            padding: 1em;
+            width: 23em;
+            outline: none;
+            color: #fff;
+        }
+        #name, #email{
+            margin-bottom: 1em;
+        }
+        textarea{
+            height: 10em;
+            margin-bottom: 2em;
+        }
+            @include ipadPro(){
+                input, textarea{
+                    width: 30em;
+                }
+            }
+
+            @include desktop(){
+                input{
+                    width: 40em;
+                    height: 4em;
+                }
+
+                textarea{
+                    width: 40em;
+                    height: 12em;
+                }
+            }
+        }
+    a{
+        font-family: lato;
+        font-weight: 900;
+        background: #fff;
+        color: #000;
+        padding: .5em 1.5em;
+        border-radius: 3px;
+        margin: 5em 0 1em 2em;
+
+        @include desktop(){
+            padding: .6em 3em;
+        }
+    }
+    
+}
+
+
+
+footer{
+    margin-top: 3em;
+    padding: 2.5em;
+    background: #2e2e2e;
+    margin-bottom: 0;
+    @include ipad(){
+        margin-bottom: 16.5em;
+    }
+    @include ipadPro(){
+        margin-bottom: 39em;
+    }
+    @include desktop{
+        margin-bottom: 0;
+    }
+
+    .footer-links{
+        text-align: center;
+        a{
+            padding: 2em;
+            color: #000;
+            :hover{
+                color: #fff;
+                transition: 200ms;
+            }
+        }
+    }
+}
+
+
+// keyframes
+@keyframes nav-load{
+    0%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes nav-load-ipad{
+    0%{
+        transform: scale(0);
+    }
+    90%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes logo-animate{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+// end of keyframes
+
+

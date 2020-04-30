@@ -1,0 +1,758 @@
+$primary-color: #3d4c58;
+$second-color: #4ba0e8;
+$light-gray: #99a0a6;
+$green: #6fbf52;
+
+@mixin ipad {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.checkmark {
+  width: 10px;
+  height: 10px;
+  padding-right: 0.5em;
+}
+
+.main-banner {
+  padding-top: 50px;
+  height: 320px;
+  width: 100%;
+
+  @include ipadPro() {
+    height: 450px;
+  }
+
+  @include desktop() {
+    height: 700px;
+  }
+
+  .img-holder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0)), url('../images/main-slide2.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .slide-text {
+      color: #fff;
+      text-align: center;
+      padding-top: 4em;
+
+      @include desktop() {
+        padding-top: 10em;
+      }
+
+      h1 {
+        line-height: 0.7em;
+        font-size: 1.5em;
+
+        @include ipadPro() {
+          font-size: 3em;
+        }
+      }
+
+      p {
+        padding-bottom: 1em;
+
+        @include ipad {
+          width: 50%;
+          margin: auto;
+          padding: 1em 0 2em 0;
+        }
+
+        @include ipadPro() {
+          font-size: 1.2em;
+        }
+
+        @include desktop {
+          font-size: 1.5em;
+          margin: 1.5em auto;
+        }
+      }
+
+      .banner-learn-more-btn {
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        padding: 0.5em 1.5em;
+        margin-top: 20em;
+        transition: 300ms;
+
+        @include ipadPro() {
+          padding: 0.6em 2.5em;
+        }
+
+        @include desktop() {
+          padding: 0.7em 3em;
+        }
+
+        &:hover {
+          background: #fff;
+          color: $second-color;
+        }
+      }
+    }
+  }
+}
+
+.cleaning-services-content {
+  margin: 3em 0 7em 0;
+
+  .checkmark {
+    width: 20px;
+  }
+
+  .cleaning-services-text {
+    text-align: center;
+
+    h1 {
+      color: $primary-color;
+      font-size: 1.5em;
+
+      @include ipadPro() {
+        font-size: 2em;
+      }
+    }
+
+    p {
+      width: 95%;
+      margin: auto;
+      color: $light-gray;
+
+      @include ipad {
+        width: 80%;
+      }
+
+      @include ipadPro() {
+        width: 70%;
+      }
+
+      @include desktop {
+        font-size: 1.1em;
+        width: 65%;
+      }
+    }
+  }
+
+  .card-slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .service-card {
+    text-align: center;
+    width: 330px;
+    height: 400px;
+    margin: 3em auto 1em auto;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(85, 85, 85, 0.17);
+
+    @include ipadPro() {
+      width: 300px;
+    }
+
+    @include desktop() {
+      width: 350px;
+    }
+
+    .img-container {
+      width: 90px;
+      height: 90px;
+      margin: 2em auto;
+
+      .building-image {
+        margin-top: 2em;
+        width: 75px;
+        height: 75px;
+        transition: 100ms ease-in-out;
+        &:hover {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 1.3em;
+      color: $primary-color;
+      margin-top: 3em;
+    }
+
+    a {
+      color: $primary-color;
+    }
+
+    .service-card-list {
+      line-height: 2em;
+      margin-bottom: 2.5em;
+      color: $light-gray;
+    }
+
+    .service-card-cta {
+      border: 3px solid $second-color;
+      padding: 0.5em 1.5em;
+      border-radius: 25px;
+    }
+  }
+
+  .dot-container {
+    text-align: center;
+    margin-top: 1em;
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      background-color: #ccc;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      margin: 0 0.3em;
+      cursor: pointer;
+
+      &:hover {
+        background: $green;
+        transition: 300ms ease-in-out;
+      }
+    }
+
+    // .dot.selected {
+    //   width: 13px;
+    //   height: 13px;
+    //   background: #fff;
+    //   border: 2px solid $green;
+    // }
+  }
+}
+
+.about-section {
+  width: 90%;
+  margin: auto;
+  transition: 0.2s;
+
+  @include ipad {
+    display: flex;
+    width: 95%;
+  }
+
+  @include ipadPro {
+    width: 90%;
+  }
+
+  .right-border {
+    border-right: 1px solid $primary-color;
+    height: 1.3em;
+    margin: 0 0.5em;
+
+    @include ipadPro() {
+      margin-right: 0 2em;
+    }
+
+    @include desktop() {
+      margin: 0 2em;
+    }
+  }
+
+  h1 {
+    font-size: 1.5em;
+
+    @include ipadPro() {
+      font-size: 2em;
+    }
+  }
+
+  .aboutCompany-switch-links {
+    display: flex;
+    width: 100%;
+    font-weight: 900;
+    font-size: 1.1em;
+    transition: 500ms;
+    cursor: pointer;
+
+    li {
+      transition: 200ms;
+      &:hover {
+        color: $second-color;
+      }
+    }
+
+    .selected-link {
+      color: $second-color;
+    }
+  }
+
+  p {
+    font-size: 0.9em;
+    color: $light-gray;
+    line-height: 1.5em;
+
+    @include ipad() {
+      font-size: 1em;
+    }
+  }
+
+  .info-section {
+    @include ipad {
+      width: 50%;
+    }
+    h1 {
+      font-size: 1.1em;
+    }
+  }
+
+  .info-section-1 {
+    p {
+      @include desktop() {
+        // width: 10%;
+      }
+    }
+
+    .about-links-content {
+      ul {
+        font-size: 0.9em;
+        color: $light-gray;
+        font-weight: 300;
+        line-height: 2em;
+
+        @include ipadPro {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+
+  .info-section-2 {
+    display: none;
+  }
+
+  .info-section-3 {
+    display: none;
+    .withUs-content {
+      display: flex;
+
+      .index-number {
+        color: $green;
+        padding-right: 0.5em;
+      }
+    }
+  }
+
+  .provide-image {
+    width: 100%;
+    height: auto;
+
+    @include ipad {
+      position: absolute;
+      width: 400px;
+      height: 500px;
+      right: 0;
+    }
+
+    @include ipadPro {
+      width: 550px;
+      height: 630px;
+    }
+
+    @include desktop {
+      width: 650px;
+    }
+  }
+}
+
+.reasons-why-us {
+  width: 90%;
+  margin: auto;
+
+  @include ipad {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'left right';
+    margin-top: 5em;
+  }
+
+  @include desktop {
+    margin-top: 10em;
+    height: 100%;
+  }
+
+  #reasons-main-header {
+    @include ipadPro {
+      font-size: 1.8em;
+    }
+  }
+
+  .reasons-content {
+    @include ipad() {
+      grid-area: right;
+    }
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: $light-gray;
+    line-height: 1.5em;
+
+    @include ipadPro {
+      font-size: 1em;
+    }
+  }
+
+  .reasons-list {
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      width: 85%;
+      margin: auto;
+      line-height: 1.8em;
+
+      @include ipadPro() {
+        width: 93%;
+      }
+    }
+  }
+
+  .why-us-image {
+    width: 100%;
+    height: auto;
+
+    @include ipad {
+      grid-area: left;
+      width: 350px;
+      height: 100%;
+    }
+
+    @include ipadPro {
+      width: 450px;
+    }
+
+    @include desktop {
+      width: 550px;
+    }
+  }
+}
+
+.testimonials {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95)), url('../images/testimonial-background.webp');
+  background-size: cover;
+  background-position: center;
+  margin-top: 5em;
+  text-align: center;
+  margin-bottom: 5em;
+  padding: 3em 0;
+  position: relative;
+
+  h1 {
+    font-size: 1.5em;
+    width: 80%;
+    margin: 0 auto 1em auto;
+
+    @include ipadPro() {
+      font-size: 2em;
+      margin-top: 2em;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      font-size: 2.5em;
+    }
+  }
+
+  figure {
+    position: relative;
+    margin-top: 3em;
+
+    @include ipad {
+      margin-top: 5em;
+    }
+
+    .quotes {
+      .left-quote {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -0.5em;
+        top: -1em;
+
+        @include ipad() {
+          left: 1em;
+        }
+
+        @include ipadPro() {
+          width: 50px;
+          height: 50px;
+          top: -3em;
+          left: 0;
+        }
+
+        @include desktop {
+          left: 3em;
+        }
+      }
+
+      .right-quote {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 12em;
+
+        @include ipad() {
+          top: 6em;
+          right: 1em;
+        }
+
+        @include ipadPro() {
+          width: 50px;
+          height: 50px;
+          right: 0;
+        }
+
+        @include desktop {
+          right: 3em;
+        }
+      }
+    }
+
+    blockquote {
+      width: 90%;
+      margin: auto;
+      font-style: italic;
+      font-size: 0.9em;
+      height: 200px;
+      color: $light-gray;
+
+      @include ipad {
+        width: 80%;
+      }
+
+      @include ipadPro() {
+        font-size: 1.1em;
+      }
+
+      @include desktop {
+        width: 70%;
+        margin-top: -1em;
+      }
+    }
+
+    .author {
+      text-align: center;
+      margin-top: 3em;
+      font-weight: 900;
+
+      @include ipad {
+        margin-top: 0;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @include desktop() {
+          height: 150px;
+          width: 150px;
+        }
+      }
+
+      .author-name {
+        color: $second-color;
+      }
+    }
+  }
+
+  .testimonial-dots {
+    text-align: center;
+    margin-top: 2em;
+    cursor: pointer;
+
+    .testimonial-dot {
+      width: 15px;
+      height: 15px;
+      background-color: #ccc;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      margin: 0 0.3em;
+    }
+
+    .testimonial-dot.selected {
+      width: 13px;
+      height: 13px;
+      background: #fff;
+      border: 2px solid $green;
+    }
+  }
+}
+
+.statistic {
+  margin-bottom: 5em;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5)), url('../images/statistic\ backgorund.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  color: #fff;
+  background-attachment: fixed;
+  padding: 3em 0 0 0;
+
+  .statistic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+
+    @include ipadPro() {
+      // grid-template-columns: repeat(4, 1fr);
+    }
+
+    // @include desktop(){
+    // // grid-template-columns: repeat(4, 1fr);
+    // }
+  }
+
+  .green-border {
+    border-bottom: 2px solid $green;
+    margin: 0.5em 4em;
+    border-radius: 5px;
+
+    @include ipad {
+      margin: 0.5em 9em;
+    }
+
+    @include ipadPro {
+      margin: 1.5em 14em;
+    }
+
+    @include desktop() {
+      margin: 1.5em 18em;
+    }
+  }
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+.statistic-numbers {
+  line-height: 1em;
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+.cleaning-products-container {
+  width: 90%;
+  margin: 2em auto 0 auto;
+
+  @include ipad() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'left ';
+  }
+
+  .product-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkmark {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.3em;
+  }
+
+  h1 {
+    font-size: 1.2em;
+
+    @include ipad {
+      font-size: 1.5em;
+    }
+
+    @include desktop() {
+      font-size: 2em;
+    }
+  }
+
+  p {
+    font-size: 0.9em;
+    color: $light-gray;
+    line-height: 1.5em;
+
+    @include desktop() {
+      font-size: 1em;
+    }
+  }
+
+  ul {
+    li {
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+
+      @include desktop() {
+        font-size: 1.3em;
+        margin-bottom: 0.7em;
+      }
+    }
+    p {
+      // width: 90%;
+      margin: auto;
+      line-height: 1.7em;
+      padding-bottom: 1em;
+      // font-size: 3em;
+    }
+  }
+
+  .cleaning-products-image {
+    width: 100%;
+    height: auto;
+
+    @include ipad() {
+      grid-area: left;
+      width: 400px;
+      margin-left: -4em;
+      height: 400px;
+    }
+
+    @include desktop() {
+      width: 550px;
+    }
+  }
+}

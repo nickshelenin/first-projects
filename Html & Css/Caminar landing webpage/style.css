@@ -1,0 +1,221 @@
+html {
+    background: url(images/bg.jpg) no-repeat fixed;
+    background-size: 100%; 
+    background-color: #1D1E22;
+    box-sizing: border-box;
+
+}
+
+body {
+    text-align: center;
+    margin: 0 4em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    margin-top: 6em;
+    line-height: 0.5em;
+    padding-bottom: 2em;
+}
+
+.title h1{
+    color: #fff;
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.title h4 {
+    color:  #bfbfbf;
+    font-weight: 100;
+}
+
+#first-title {
+    display: inline-block;
+    background-color: #fff;
+    width: 100%;
+}
+
+#first-title h1 {
+    padding: 1em;
+}
+
+#first-title h3 {
+    margin: -1em 2em 3em 2em;
+    font-size: 14px;
+    color: #bfbfbf;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+
+#content-paragraph {
+    display: inline-block;
+    color: #9A9A9A;
+    background-color: #F4F4F4;
+    padding: 2em;
+    line-height: 1.7em;
+    text-align: left;
+}
+
+#content-paragraph p:first-child{
+    padding-bottom: 2em;
+}
+
+#section-b {
+    background-color: #1E1F23;
+    padding-bottom: 2em;
+    width: 100%;
+    padding-top: 1em;
+}
+
+#second-title {
+    background: #121315;
+    width: 100%;
+}
+
+#second-title h1 {
+    color: #fff;
+    padding: 1em;
+    font-size: 1.7em;
+
+}
+
+#second-title h4 {
+    font-weight: 100;
+    color: #4A4B4D;
+    font-size: 0.9em;
+    padding-bottom: 3em;
+    letter-spacing: 3px;    
+}
+
+#gallery {
+    display: inline-block;
+    width: 100%;
+    margin-top: -35px;
+}
+
+.wrapper {
+    margin: 0 2em
+}
+
+.wrapper ul {
+    margin-left: -2.5em;
+}
+
+.card {
+    margin-left: em;
+    margin-top: -em;
+}
+
+.card-title {
+    display: inline-block;
+    background: #f4f4f4;
+    padding-top: 1em;
+}
+
+.card-title p {
+    font-size: 18px;
+    color: #B7B7B7;
+    font-weight: 100;
+    line-height: 25px;
+    padding: 2em;
+    margin-top: -2em;
+}
+
+#card2 {
+     background: #1E1F23;
+}
+
+#card2 h2 {
+    color: white;
+}
+
+#card2 p {
+    color: #555659;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+.icons a {
+    color: #C7C7C8;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.container p{
+    color: #828284;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.container a{
+    color: #C7C7C8;
+}
+
+@media (min-width: 980px) {
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        padding-bottom: 3em;
+    }
+
+    .grid1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-title {
+        text-align: left;
+        padding: 5em 0 0 1em
+    }
+
+    .card-title h2 {
+        padding-left: 1.5em;
+    }
+
+    .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        direction: rtl;
+    }
+
+    .grid2 .card-title {
+        text-align: right;
+    }
+
+    .grid2 h2 {
+        padding-right: 1.5em;
+    }
+
+    .card-title h2 {
+        padding-left: 1.5em;
+    }
+
+    .grid3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-title {
+        text-align: left;
+        padding: 5em 0 0 1em
+    }
+
+    .card-title h2 {
+        padding-left: 1.5em;
+    }
+}

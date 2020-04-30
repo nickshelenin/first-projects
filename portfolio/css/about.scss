@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Passion+One:400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,700&display=swap');
+
+// variables
+
+$second-color: #e31b6d;
+$main-color: #00EFF6;
+$ipad: 767px;
+$ipadPro: 1024px;
+$desktop: 1200px;
+
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+
+@mixin ipadPro {
+  @media (min-width: #{$ipadPro}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+// main
+
+body {
+  background: #202024;
+  font-family: source sans pro;
+  color: #fff;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.about-container {
+  width: 70%;
+  margin: auto;
+
+  @include ipadPro() {
+    width: 50%;
+  }
+}
+
+.about-text-container {
+  h1 {
+    margin-top: 5em;
+    color: $main-color;
+    font-family: montserrat;
+  }
+
+  p {
+    padding-bottom: 1em;
+    font-family: lato;
+  }
+}
+
+.technologies-container {
+  padding-top: 1em;
+  h1 {
+    color: $main-color;
+    padding-bottom: 1em;
+    font-family: montserrat;
+  }
+
+  .technologies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    i {
+      color: #fff;
+      padding-right: 1.4em;
+      text-align: center;
+
+      @include desktop() {
+        padding-right: 0.1em;
+      }
+    }
+
+    p {
+      padding-bottom: 2em;
+    }
+  }
+}

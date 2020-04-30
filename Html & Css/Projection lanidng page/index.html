@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8f014554a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="container">
+
+        <header>
+        <a href="#" id="logo">Projection by TEMPLATED</a>
+
+        <nav>
+            <a href="#" class="fas fa-bars hide-desktop" id="nav-menu" id="menu"></a>             
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit"><a href="#" class="fas fa-times exit-button hide desktop"></a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Generic</a></li>
+                    <li><a href="#">Elements</a></li>
+                </ul>               
+        </nav>
+        </header>
+
+        <section class="section-a">
+            <h1 id="heading">Welcome to Projection</h1>
+        <div class="grid">    
+            <div class="car-icon">
+                <i class="fas fa-car fa-2x"></i>
+                <h1>Aliquam</h1>
+                <p>Suspendisse amet ullamco</p>
+            </div>
+            <div class="camera-icon">
+                <i class="fas fa-camera fa-2x"></i>
+                <h1>Elementum</h1>
+                <p>Class aptent taciti ad litora</p>
+            </div>
+            <div class="bug-icon">
+                <i class="fas fa-bug fa-2x"></i>
+                <h1>Ultrices</h1>
+                <p>Nulla vitae mauris non felis</p>
+            </div>
+        </div>
+                <button class="btn1" id="button1">GET STARTED</button>
+        </section>
+    
+
+    <section class="section-b">
+        <div class="photo1">
+            <img src="images/pic01.jpg" alt="">
+            <h1>Lorem ipsum dolor amet nullam</h1>
+            <p>Morbi in sem quis dui placerat ornare. Pellentesquenisi euismod in, pharetra a, ultricies in diam sed arcu. Crasconsequat egestas augue vulputate.</p>
+        <button class="btn1">LEARN MORE</button>
+        </div>
+
+        <div class="photo2">
+            <img src="images/pic02.jpg" alt="">
+            <h1>Sed feugiat tempus adipicsing</h1>
+            <p>Pellentesque fermentum dolor. Aliquam quam lectus facilisis auctor, ultrices ut, elementum vulputate, nunc blandit ellenste egestagus commodo.</p>
+        <button class="btn1">LEARN MORE</button>
+        </div>
+    </section>
+
+    <footer>
+        <h1>Get in touch</h1>
+
+        <div class="input-grid">
+        <form action="" >
+            <label for="name" class="labels">Name</label>
+            <input id="name" type="text" placeholder="Name">
+        </form>
+
+        <form>
+            <label class="labels">Email</label>
+            <input type="text" placeholder="Email"> 
+        </form>   
+    </div>
+
+    <div class="textarea-grid">
+        <form>
+            <label class="labels">Message</label>
+            <textarea id="textarea" placeholder="Message"></textarea>
+        </form>
+    </div>
+           <button class="btn3">SEND MESSAGE</button>
+        <p id="copyright">&copy; Untitled. Design: <a href="#">TEMPLATED</a>. Images: <a href="#">Unsplash</a>.</p>
+    </footer>
+</div>
+
+    <script>
+
+        var menu = document.getElementById('nav-menu');
+        var menu = document.getElementById('nav');
+        var menu = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault 
+        });
+
+
+    </script>
+
+</body>
+
+</html>
